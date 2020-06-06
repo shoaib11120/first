@@ -1,14 +1,22 @@
 import web
 urls = (
-	'/','home'
+	'/','Welcome',
+	'/home','Home',
+	'/profile','Profile'
 )
 rende=web.template.render("views/resources/", base="base_layout")
-class home:
+class Welcome:
+	"""docstring for home"""
+	def GET(self):
+		return rende.welcome()
+class Profile:
+	"""docstring for home"""
+	def GET(self):
+		return rende.profile()
+class Home:
 	"""docstring for home"""
 	def GET(self):
 		return rende.home()
-
-
 if __name__ == "__main__" :
 	app=web.application(urls,globals())
 	app.run()

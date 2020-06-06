@@ -1,5 +1,5 @@
 $def with (page)
-$var css:static/css/home.css
+$var css:static/css/base_layout.css
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +9,31 @@ $var css:static/css/home.css
 	<title>Document</title>
 </head>
 <body>
-	<div id="app">
-		$:page
+	<div id="body">
+		<div id="header">
+			<div id="cName">Company</div>
+			<div id="nBar">
+				<ul>
+					<li>
+						<a href="/home" id="home">Home </a>
+					</li>
+					<li>
+						<a href="/latest" id="latest">Latest </a>
+					</li>
+					<li>
+						<a href="/category"  id="category">Category </a>
+					</li>
+					<li>
+						<a href="/profile"  id="profile">p </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="app">
+			$:page
+		</div>
+
 	</div>
 </body>
 </html>
