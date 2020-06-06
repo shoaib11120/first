@@ -1,0 +1,16 @@
+$def with (page)
+$var css:static/css/home.css
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	$for i in self.css.split():
+		<link rel="stylesheet" type="text/css" href="$i"/>
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		$:page
+	</div>
+</body>
+</html>

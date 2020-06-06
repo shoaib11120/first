@@ -2,13 +2,11 @@ import web
 urls = (
 	'/','home'
 )
-rende=web.template.render("views/resources/")
-css=web.template.render("views/resources/css/")
+rende=web.template.render("views/resources/", base="base_layout")
 class home:
 	"""docstring for home"""
 	def GET(self):
-		home_css=str(css.home())
-		return rende.home(home_css)
+		return rende.home()
 
 
 if __name__ == "__main__" :
