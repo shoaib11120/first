@@ -1,0 +1,39 @@
+
+#container{
+	position: absolute;
+	z-index: 0;
+	width: 100%;
+	background-color: green;
+}
+#head{
+	position: relative;
+	z-index: 1;
+	background-color: red;
+	float: right;
+	width: 50%;
+
+}
+ul{
+	list-style-type: none;
+}
+ul li{
+	float: left;
+	padding-right: 1%;
+	padding-left: 1%;
+	padding-bottom: 1%;
+}
+.dBu{
+	background-color: rgba(255,255,255,0.6);
+
+	width: auto;
+	height: 20px;
+	border: none;
+	border-radius: 4px;
+}
+.dBu:hover{
+	background-color: rgba(255,255,255,0.8);
+}
+.dBu:active{
+	background-color: rgba(255,255,255,1);
+
+}
