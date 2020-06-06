@@ -1,8 +1,55 @@
+/*----common to all----*/
+a{
+
+	text-decoration: none;
+	text-align: center;
+	color: black;
+}
+
+
+
+/*----foot----*/
+#foot{
+	float: bottom;
+	height: 100px;
+	width: 100%;
+	background-color: skyblue;
+	display: block;
+	z-index: 1;
+}
+.foTags{
+	width: 100px;
+	height: 40px;
+	display:inline-flex;
+	z-index: 1;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+.foTags >div{
+	margin-top: 15px;
+	margin-left: 45%;
+}
+
+
+/*----body----*/
+#body {
+	width: 100%;
+	display: block;
+	height: 160vh;
+	min-height: 150vh;
+	z-index: 0;
+}
+
+
+
+/*----header----*/
 #header{
 	height: 50px;
 	width: 100%;
 	background-color: skyblue;
 	display: block;
+	float: top;
+	z-index: 1;
 }
 #cName{
 	font-size: 30px;
@@ -14,7 +61,7 @@
 }
 #nBar {
 	float: right;
-	width: 330px;
+	width: 380px;
 	padding: 1px;
 }
 #nBar >ul{
@@ -33,26 +80,28 @@
 	margin-right: 15px;
 }
 #nBar > ul >li a{
-	text-decoration: none;
 	font-size: 20px;
 	padding-top: 2px;
 	display: block;
-	text-align: center;
-	color: black;
+	padding-right: 2px;
+	padding-left: 2px;
+}
 
+#profile {
+}
+#pr{
+
+	width: 30px;
+	height: 30px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding: 1px;
+	border-radius: 100%;
+	overflow: hidden;
 }
 #nBar > ul >li:hover {
 	background-color: rgba(255,255,255,0.5);
 }
 #nBar > ul >li:active {
 	background-color: rgba(255,255,255,0.8;
-}
-#profile{
-	width: 10px;
-	height: 10px;
-}
-#body{
-	width: 100%;
-	z-index: 0;
-	display: block;
 }

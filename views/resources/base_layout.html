@@ -1,11 +1,15 @@
 $def with (page)
-$var css:static/css/base_layout.css
+$var css:static/css/base_layout.css static/css/welcome.css
+$var img:static/assets/JellyFish.jpg
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	$for i in self.css.split():
 		<link rel="stylesheet" type="text/css" href="$i"/>
+	<style>
+			
+	</style>
 	<title>Document</title>
 </head>
 <body>
@@ -23,8 +27,10 @@ $var css:static/css/base_layout.css
 					<li>
 						<a href="/category"  id="category">Category </a>
 					</li>
-					<li>
-						<a href="/profile"  id="profile">p </a>
+					<li >
+						<div id="pr">
+						<a href="/profile"  id="profile"><img width="30px" height="30px;" src="static/assets/JellyFish.jpg"" alt="Profile"> </a>
+					</div>
 					</li>
 				</ul>
 			</div>
@@ -34,6 +40,29 @@ $var css:static/css/base_layout.css
 			$:page
 		</div>
 
+		<div id="foot">
+			<div class="foTags">
+				<div><a href="/home">home</a></div>
+			</div>
+			<div class="foTags">
+				<div><a href="top">top</a></div>
+			</div>
+			<div class="foTags">
+				<div><a href="/latest">latest</a></div>
+			</div>
+			<div class="foTags">
+				<div><a href="/category">category</a></div>
+			</div>
+			<div class="foTags">
+				<div><a href="/profile">profile</a></div>
+			</div>
+			<div class="foTags">
+				<div><a href="/help">help</a></div>
+			</div>
+			<div class="foTags">
+				<div><a href="/customer care">customer care</a></div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
