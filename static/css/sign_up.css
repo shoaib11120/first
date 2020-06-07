@@ -1,0 +1,14 @@
+#SUCont{
+	height: 50vh;
+	width: 100%;
+	background-color: rgb(40,41,35);
+	display: block;
+	margin-top: 0;
+}
+#form_cont{
+	padding-top:25vh;
+	margin-left: 40%;
+	height: auto;
+	width: auto;
+
+}

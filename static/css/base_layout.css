@@ -1,19 +1,18 @@
 /*----common to all----*/
-a{
-
+/*a{
 	text-decoration: none;
 	text-align: center;
 	color: black;
 }
-
+*/
 
 
 /*----foot----*/
 #foot{
-	float: bottom;
-	height: 100px;
+	margin-bottom: 0;
+	min-height: 100px;
 	width: 100%;
-	background-color: skyblue;
+	background-color: black;
 	display: block;
 	z-index: 1;
 }
