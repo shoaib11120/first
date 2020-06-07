@@ -1,10 +1,9 @@
 /*----common to all----*/
-/*a{
+a{
 	text-decoration: none;
 	text-align: center;
 	color: black;
 }
-*/
 
 
 /*----foot----*/
@@ -12,7 +11,7 @@
 	margin-bottom: 0;
 	min-height: 100px;
 	width: 100%;
-	background-color: black;
+	background-color: skyblue;
 	display: block;
 	z-index: 1;
 }
@@ -27,6 +26,9 @@
 .foTags >div{
 	margin-top: 15px;
 	margin-left: 45%;
+}
+#fCont{
+	padding-bottom: 20px;
 }
 
 
