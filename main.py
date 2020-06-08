@@ -7,6 +7,7 @@ urls = (
 	'/profile/sign_up','Sign_up',
 	'/post-sign-up','Sign_up_user'
 )
+web.config.debug=True
 rende=web.template.render("views/resources/", base="base_layout")
 class Welcome:
 	"""docstring for home"""
@@ -27,10 +28,10 @@ class Sign_up:
 		return rende.sign_up()
 class Sign_up_user:
 	def POST(self):
-		print("reached")
+
 		data=web.input()
-		print(data.username)
-		return data.username
+		obj=sign_upM.Sign_up()
+		obj.setUser(data.username,data.full_name,data.email,data.password)
 if __name__ == "__main__" :
 	app=web.application(urls,globals())
 	app.run()
