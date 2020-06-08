@@ -1,12 +1,16 @@
 $def with (page)
-
+$var js:/static/js/mainS.js /static/js/jquery-3.5.1.js
 $var css:/static/css/base_l.css /static/css/welcomeC.css /static/css/sign_upC.css
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	$for i in self.css.split():
 		<link rel="stylesheet" type="text/css" href="$i"/>
+
+	
 	<style>
 			
 	</style>
@@ -40,7 +44,7 @@ $var css:/static/css/base_l.css /static/css/welcomeC.css /static/css/sign_upC.cs
 			$:page
 		</div>
 
-		<div id="foot">
+		<!-- <div id="foot">
 			<div id="fCont">
 				<div class="foTags">
 					<div><a href="/home">home</a></div>
@@ -64,7 +68,9 @@ $var css:/static/css/base_l.css /static/css/welcomeC.css /static/css/sign_upC.cs
 					<div><a href="/customer care">customer care</a></div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
+	$for i in self.js.split():
+		<script src="$i"></script>
 </body>
 </html>

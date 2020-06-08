@@ -1,15 +1,26 @@
 
-#SUCont{
-	height: 50vh;
-	width: 100%;
-	background-color: rgb(40,41,35);
-	display: block;
-	margin-top: 0;
-}
 #form_cont{
-	padding-top:25vh;
-	margin-left: 40%;
-	height: auto;
-	width: auto;
+	margin-top:35vh;
+	height: 30vh;
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+}
+#form_cont>form>input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance:none;
+    margin-bottom: 10px;
+    background: transparent;
 
+ }
+#form_cont > form{
+	margin-left: 40%;
+
+}
+#SUCont{
+	min-height: 100vh;
+	z-index: 0;
+	margin-top: 0;
+	background-color: rgba(0,0,0,0.6);
 }

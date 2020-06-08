@@ -2,12 +2,16 @@
 a{
 	text-decoration: none;
 	text-align: center;
-	color: black;
+}
+#app{
+	overflow: hidden;
+	background: url("https://source.unsplash.com/WLUHO9A_xik/1600x900");
+	background-repeat: no-repeat;
+	background-color: rgba(0,0,0,0.6);
 }
 
-
 /*----foot----*/
-#foot{
+/*#foot{
 	margin-bottom: 0;
 	min-height: 100px;
 	width: 100%;
@@ -30,15 +34,15 @@ a{
 #fCont{
 	padding-bottom: 20px;
 }
-
-
+*/
 /*----body----*/
 #body {
 	width: 100%;
 	display: block;
-	height: 160vh;
-	min-height: 150vh;
+	min-height: 100vh;
 	z-index: 0;
+	background-color: rgb(40,40,40);
+	overflow: hidden;
 }
 
 
@@ -46,10 +50,11 @@ a{
 /*----header----*/
 #header{
 	height: 50px;
-	width: 100%;
-	background-color: skyblue;
+	width: 98%;
+	margin-top: 0;
 	display: block;
 	float: top;
+	position: absolute;
 	z-index: 1;
 }
 #cName{
@@ -59,6 +64,7 @@ a{
 	padding-bottom: 10px;
 	padding-top: 10px;
 	float: left;
+	color: white;
 }
 #nBar {
 	float: right;
@@ -74,7 +80,7 @@ a{
 }
 #nBar > ul >li{
 	float: left;
-	background-color: rgba(255,255,255,0.1);
+	background-color: rgba(255,255,255,0);
 	border-radius: 2px;
 	transition: 0.6s;
 	height: 25px;
@@ -86,6 +92,7 @@ a{
 	display: block;
 	padding-right: 2px;
 	padding-left: 2px;
+	color: white;
 }
 
 #profile {
@@ -101,7 +108,8 @@ a{
 	overflow: hidden;
 }
 #nBar > ul >li:hover {
-	background-color: rgba(255,255,255,0.5);
+	background-color: rgba(255,255,255,0.2);
+
 }
 #nBar > ul >li:active {
 	background-color: rgba(255,255,255,0.8;
