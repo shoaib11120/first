@@ -1,13 +1,22 @@
+
 <div id="SUCont">
 	<br/><br/>
 	<div id="form_cont">
-		<form id="sign_up_form">
-			<input type="text" id="username" name="username"><br/>
-			<input type="text" id="full_name" name="full_name"><br/>
-			<input type="email" id="email" name="email"><br/>
-			<input type="password" id="password" name="password"><br/>
-			<input type="password" id="c-password"  name="c-password"><br/>
-			<button type="submit"   >Submit</button>
+		<form id="sign_up_form" >
+			<fieldset>
+				<legend>Sign-UP</legend>
+				<label>Username:</label><br/>
+				<input type="text" id="username" name="username" autofocus required><br/>
+				<label>Fullname:</label><br/>
+				<input type="text" id="full_name" name="full_name" required><br/>
+				<label>Email:</label><br/>
+				<input type="email" id="email" name="email" required><br/>
+				<label>Password:</label><br/>
+				<input type="password" id="password" name="password" required><br/>
+				<label>confirm Password:</label><br/>
+				<input type="password" id="c_password"  name="c_password" required><br/>
+				<button type="submit"   >Submit</button>
+			</fieldset>
 		</form>
 	</div>
 </div>

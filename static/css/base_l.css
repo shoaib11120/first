@@ -3,12 +3,6 @@ a{
 	text-decoration: none;
 	text-align: center;
 }
-#app{
-	overflow: hidden;
-	background: url("https://source.unsplash.com/WLUHO9A_xik/1600x900");
-	background-repeat: no-repeat;
-	background-color: rgba(0,0,0,0.6);
-}
 
 /*----foot----*/
 /*#foot{
@@ -95,8 +89,7 @@ a{
 	color: white;
 }
 
-#profile {
-}
+
 #pr{
 
 	width: 30px;

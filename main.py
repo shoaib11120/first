@@ -1,5 +1,5 @@
 import web
-from models import sign_upM
+from models import user_data
 urls = (
 	'/','Welcome',
 	'/home','Home',
@@ -16,8 +16,8 @@ class Welcome:
 class Profile:
 	"""docstring for home"""
 	def GET(self):
-		print('profile')
-		return rende.profile()
+		obj=user_data.user()
+		return rende.profile(obj.getUName(),obj.getFName(),obj.getEmail())
 class Home:
 	"""docstring for home"""
 	def GET(self):
@@ -30,8 +30,9 @@ class Sign_up_user:
 	def POST(self):
 
 		data=web.input()
-		obj=sign_upM.Sign_up()
-		obj.setUser(data.username,data.full_name,data.email,data.password)
+		obj=user_data.user()
+		return obj.setUser(data.username,data.full_name,data.email,data.password,data.c_password)
+
 if __name__ == "__main__" :
 	app=web.application(urls,globals())
 	app.run()

@@ -1,26 +1,68 @@
-
-#form_cont{
-	margin-top:35vh;
-	height: 30vh;
-	width: 100%;
-	position: absolute;
-	z-index: 1;
-}
-#form_cont>form>input{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance:none;
-    margin-bottom: 10px;
-    background: transparent;
-
- }
-#form_cont > form{
-	margin-left: 40%;
-
+#app{
+	overflow: hidden;
+	background: url("https://source.unsplash.com/1600x900/?seamless,dark");
+	background-repeat: no-repeat;
 }
 #SUCont{
 	min-height: 100vh;
 	z-index: 0;
 	margin-top: 0;
 	background-color: rgba(0,0,0,0.6);
+}
+#form_cont{
+	margin-top:15vh;
+	min-height: 30vh;
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+}
+#form_cont>form input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance:none;
+    margin-bottom: 20px;
+    background: transparent;
+    margin: 10px;
+    color: white;
+    width:250px;
+ }
+ #form_cont>form label{
+     margin-bottom: 10px;
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+
+ }
+ #form_cont>form legend{
+    color: white;
+    font-size: 40px;
+ }
+  #form_cont>form button{
+     margin-bottom: 30px;
+    margin: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    transition: 0.4s;
+ }
+   #form_cont>form button:hover{
+    background-color: rgba(255,255,255,0.5);
+    color: black;
+
+ }
+#form_cont  fieldset{
+	width: 25%;
+	min-height: 250px;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 5px;
+	padding-top: 20px;
+}
+#form_cont  form{
+	width: 25%;
+	min-height: 250px;
+	padding: 5px;
+	margin-top: 20px;
+	margin-left: 40%;
+	border-radius: 5px;
 }
