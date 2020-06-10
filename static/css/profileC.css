@@ -2,13 +2,9 @@
 	min-height: 100vh;
 	z-index: 0;
 	margin-top: 0;
-}
-#app{
-	overflow: hidden;
-	background: url("https://source.unsplash.com/1600x900/?nature,mountains");
-	background-repeat: no-repeat;
 	background-color: rgba(0,0,0,0.6);
 }
+
 #PData{
 	color: white;
 	margin-left: 40%;

@@ -1,4 +1,5 @@
 import web
+import random
 from models import user_data
 urls = (
 	'/','Welcome',
@@ -7,12 +8,16 @@ urls = (
 	'/profile/sign_up','Sign_up',
 	'/post-sign-up','Sign_up_user'
 )
+img=["/static/assets/img(1).jpg", "/static/assets/img(2).jpg","/static/assets/img(3).jpg","/static/assets/img(4).jpg","/static/assets/img(5).jpg","/static/assets/img(6).jpg","/static/assets/img(7).jpg"]
 web.config.debug=True
 rende=web.template.render("views/resources/", base="base_layout")
+
 class Welcome:
 	"""docstring for home"""
 	def GET(self):
-		return rende.welcome()
+		imG=img[random.randrange(0,7)]
+		print(imG)
+		return rende.welcome(imG)
 class Profile:
 	"""docstring for home"""
 	def GET(self):

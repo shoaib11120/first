@@ -1,22 +1,37 @@
-
+<!-- 
+<link rel="stylesheet" type="text/css" href=/static/js/designJ.js"/> -->
 <div id="SUCont">
 	<br/><br/>
 	<div id="form_cont">
 		<form id="sign_up_form" >
-			<fieldset>
-				<legend>Sign-UP</legend>
-				<label>Username:</label><br/>
-				<input type="text" id="username" name="username" autofocus required><br/>
-				<label>Fullname:</label><br/>
-				<input type="text" id="full_name" name="full_name" required><br/>
-				<label>Email:</label><br/>
-				<input type="email" id="email" name="email" required><br/>
-				<label>Password:</label><br/>
-				<input type="password" id="password" name="password" required><br/>
-				<label>confirm Password:</label><br/>
-				<input type="password" id="c_password"  name="c_password" required><br/>
+			
+				<div class="inputC">
+					
+					<input class="inputM" type="text" id="username" name="username"  autofocus required onfocus="focusFun('sp1')" onblur="blurFun(this,'sp1')"><br/>
+					<span class="inputText" id="sp1" data-V="username"></span>
+				</div>
+				<div class="inputC">
+					
+					<input class="inputM" type="text" id="full_name" name="full_name"  required onfocus="focusFun('sp2')" onblur="blurFun(this,'sp2')"><br/>
+					<span class="inputText" id="sp2" data-V="full_name"></span>
+				</div>
+				<div class="inputC">
+					
+					<input class="inputM" type="email" id="email" name="email"  required onfocus="focusFun('sp3')" onblur="blurFun(this,'sp3')"><br/>
+					<span class="inputText" id="sp3" data-V="email"></span>
+				</div>
+				<div class="inputC">
+					
+					<input class="inputM" type="password" id="password" name="password"  required onfocus="focusFun('sp4')" onblur="blurFun(this,'sp4')"><br/>
+					<span class="inputText" id="sp4" data-V="password"></span>
+				</div>
+				<div class="inputC">
+					
+					<input class="inputM" type="password" id="c_password"  name="c_password"  required onfocus="focusFun('sp5')" onblur="blurFun(this,'sp5')"><br/>
+					<span class="inputText" id="sp5" data-V="c_password"></span>
+				</div>
 				<button type="submit"   >Submit</button>
-			</fieldset>
+			
 		</form>
 	</div>
 </div>

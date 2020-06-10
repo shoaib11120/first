@@ -1,0 +1,48 @@
+
+#SUCont{
+	min-height: 100vh;
+	z-index: 0;
+	margin-top: 0;
+}
+#form_cont{
+	margin-top:15vh;
+	min-height: 30vh;
+	width: 100%;
+    position: absolute;
+
+}
+#form_cont>form input{
+	display: inline-block;
+    margin-bottom: 20px;
+    margin: 10px;
+    width: 90%;
+    position: relative;
+ }
+  #form_cont>form button{
+     margin-bottom: 30px;
+    margin: 10px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: grey;
+    transition: 0.4s;
+ }
+   #form_cont>form button:hover{
+    background-color: #e5e5;
+    color: black;
+    border: 1px solid #e5e5;
+
+ }
+ .inputC{
+
+    width: 90%;
+ }
+#form_cont  form{
+	width: 35%;
+	min-height: 250px;
+	padding: 5px;
+	margin-top: 20px;
+	margin-left: 40%;
+	border-radius: 5px;
+    background-color: #e5e5e5;
+}

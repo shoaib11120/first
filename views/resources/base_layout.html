@@ -1,20 +1,20 @@
 $def with (page)
-$var js:/static/js/jquery-3.5.1.js /static/js/mainS.js
-$var css:/static/css/base_l.css /static/css/welcomeC.css /static/css/sign_upC.css /static/css/profileC.css
+$var css:/static/css/base.css /static/css/welcomeC.css /static/css/sign_upC1.css /static/css/profileC.css /static/css/designC.css
+$var js:/static/js/jquery-3.5.1.js /static/js/mainS.js /static/js/welcomeJ.js /static/js/designJ1.js
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	
 	$for i in self.css.split():
-		<link rel="stylesheet" type="text/css" href="$i"/>
-
+	 	<link rel="stylesheet" type="text/css" href="$i"/>
 	
 	<style>
 			
 	</style>
-	<title>Document</title>
+	<title>First Web</title>
 </head>
 <body>
 	<div id="body">
@@ -40,7 +40,12 @@ $var css:/static/css/base_l.css /static/css/welcomeC.css /static/css/sign_upC.cs
 			</div>
 		</div>
 
-		<div id="app">
+
+		$for i in self.js.split():
+				<script src="$i"></script>			
+
+		
+		<div id="app" >
 			$:page
 		</div>
 
@@ -71,7 +76,6 @@ $var css:/static/css/base_l.css /static/css/welcomeC.css /static/css/sign_upC.cs
 			</div>
 		</div> -->
 	</div>
-	$for i in self.js.split():
-		<script src="$i"></script>
+	
 </body>
 </html>
