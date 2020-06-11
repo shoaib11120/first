@@ -6,6 +6,7 @@ urls = (
 	'/home','Home',
 	'/profile','Profile',
 	'/profile/sign_up','Sign_up',
+	'/profile/log_in','Log_in',
 	'/post-sign-up','Sign_up_user'
 )
 img=["/static/assets/img(1).jpg", "/static/assets/img(2).jpg","/static/assets/img(3).jpg","/static/assets/img(4).jpg","/static/assets/img(5).jpg","/static/assets/img(6).jpg","/static/assets/img(7).jpg"]
@@ -31,6 +32,10 @@ class Sign_up:
 	"""docstring for home"""
 	def GET(self):
 		return rende.sign_up()
+class Log_in:
+	"""docstring for home"""
+	def GET(self):
+		return rende.log_in()
 class Sign_up_user:
 	def POST(self):
 
