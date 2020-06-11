@@ -16,7 +16,7 @@ class user:
 		user=self.Users.find_one({"username":username})
 		if user:
 			if bcrypt.checkpw(password.encode(),user["password"].encode()):
-				return str(username)
+				return user
 			else:
 				return "PError"
 		else:

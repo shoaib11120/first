@@ -12,9 +12,11 @@ $(document).ready(function(){
 			success:function(res){
 				if(res=="PError"){
 					alert("Password dosn't matches");
+				}else if( res=="EUError"){
+					 alert("username already taken");
 				}else if( res!=""){
 					 alert("Added Successfully");
-					 window.location.href="/"+res+"/profile";
+					 window.location.href="/profile";
 				}
 			}
 		});
@@ -34,6 +36,7 @@ $(document).ready(function(){
 					 alert("user dosn't exists");
 				}else if( res!=""){
 					 alert("welcome "+res);
+					 window.location.href="/profile";
 				}
 			}
 		});

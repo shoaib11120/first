@@ -1,19 +1,22 @@
 import web
 import random
 from models import sign_up_user,log_in_user
+web.config.debug=False
 urls = (
 	'/','Welcome',
 	'/home','Home',
-	'/(.*)/profile','Profile',
 	'/profile','Profilep',
 	'/profile/sign_up','Sign_up',
 	'/profile/log_in','Log_in',
 	'/post-sign-up','Sign_up_user',
-	'/post-log-in','Log_in_user'
+	'/post-log-in','Log_In_user'
 )
-img=["/static/assets/img(1).jpg", "/static/assets/img(2).jpg","/static/assets/img(3).jpg","/static/assets/img(4).jpg","/static/assets/img(5).jpg","/static/assets/img(6).jpg","/static/assets/img(7).jpg"]
-web.config.debug=True
-rende=web.template.render("views/resources/", base="base_layout")
+
+app=web.application(urls,globals())
+session=web.session.Session(app,web.session.DiskStore("session"),initializer={'user':None})
+session_data=session._initializer
+
+rende=web.template.render("views/resources/", base="base_layout",globals={'session':session_data,'current_user':session_data["user"]})
 
 class Welcome:
 	"""docstring for home"""
@@ -21,14 +24,11 @@ class Welcome:
 		imG=img[random.randrange(0,7)]
 		print(imG)
 		return rende.welcome(imG)
-class Profile:
-	"""docstring for home"""
-	def GET(self,name):
-		return rende.profile()
+
 class Profilep:
 	"""docstring for home"""
 	def GET(self):
-		return rende.profile()
+		return rende.profile1()
 class Home:
 	"""docstring for home"""
 	def GET(self):
@@ -45,14 +45,25 @@ class Sign_up_user:
 	def POST(self):
 		data=web.input()
 		obj=sign_up_user.user()
-		return obj.setUser(data.username,data.full_name,data.email,data.password,data.c_password)
-class Log_in_user:
+		rValue=obj.setUser(data.username,data.full_name,data.email,data.password,data.c_password)
+		if rValue!='' and rValue!='PError'  and rValue!='EUError':
+			session_data["user"]=rValue
+		return rValue
+class Log_In_user:
 	def POST(self):
 		data=web.input()
 		obj=log_in_user.user()
-		return obj.getUser(data.username,data.password)
+		print('reached')
+		rValue=obj.getUser(data.username,data.password)
+		print('reached')
+		print(str(rValue))
+		if rValue!='' and rValue!='PError'  and rValue!='UError':
+			print(str(rValue))
+			session_data["uiser"]=None
+			session_data["user"]=rValue
+		return rValue
 
 if __name__ == "__main__" :
-	app=web.application(urls,globals())
+	
 	app.run()
 		

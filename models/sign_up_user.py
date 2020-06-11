@@ -15,10 +15,14 @@ class user:
 		email=email.strip()
 		password=password.strip()
 		c_password=c_password.strip()
-		if password==c_password:
-			password=bcrypt.hashpw(c_password.encode(),bcrypt.gensalt())
-			id= self.Users.insert_one({"username":username,"full_name":full_name,"email":email,"password":password })
-			return str(username)
+		check_user=self.Users.find_one({"username":username})
+		if check_user:
+			return "EUError"
 		else:
-			return "PError"
+			if password==c_password:
+				password=bcrypt.hashpw(c_password.encode(),bcrypt.gensalt())
+				id= self.Users.insert_one({"username":username,"full_name":full_name,"email":email,"password":password })
+				return str(username)
+			else:
+				return "PError"
 	
