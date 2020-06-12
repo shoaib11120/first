@@ -16,7 +16,7 @@ $(document).ready(function(){
 					 alert("username already taken");
 				}else if( res!=""){
 					 alert("Added Successfully");
-					 window.location.href="/profile";
+					 window.location.href="/";
 				}
 			}
 		});
@@ -35,10 +35,25 @@ $(document).ready(function(){
 				}else if( res=="UError"){
 					 alert("user dosn't exists");
 				}else if( res!=""){
-					 alert("welcome "+res);
+					 alert("logged in");
+					  window.location.href="/";
+				}
+			}
+		});
+
+	});
+	$(document).on("click","#logoutB",function (e) {
+		e.preventDefault();
+		$.ajax({
+			url: '/profile/log_out',
+			type: 'GET',
+			success:function(res){
+				if( res=="success"){
+					 alert(res);
 					 window.location.href="/profile";
 				}
 			}
 		});
+		
 	});
 });

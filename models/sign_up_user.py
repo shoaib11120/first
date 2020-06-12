@@ -22,7 +22,7 @@ class user:
 			if password==c_password:
 				password=bcrypt.hashpw(c_password.encode(),bcrypt.gensalt())
 				id= self.Users.insert_one({"username":username,"full_name":full_name,"email":email,"password":password })
-				return str(username)
+				return self.Users.find_one({"username":username})
 			else:
 				return "PError"
 	
