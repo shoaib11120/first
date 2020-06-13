@@ -15,7 +15,7 @@ urls = (
 
 app=web.application(urls,globals())
 if web.config.get('_session') is None:
-	session=web.session.Session(app,web.session.DiskStore("session"),initializer={'user':None})
+	session=web.session.Session(app,web.session.DiskStore("sessions"),initializer={'user':None})
 	
 	web.config._session=session
 else:
@@ -51,7 +51,8 @@ class Log_out:
 	def GET(self):
 		session["user"]=None
 		session_data["user"]=None
-		#session.kill()
+		if web.config.debug==False:
+			session.kill()
 		return "success"
 class Sign_up_user:
 	def POST(self):
