@@ -85,11 +85,8 @@ class AvatarUpload:
 
 		if 'avatar' in file:
 			fPath=file.avatar.filename.replace("\\","/")
-			#fName=fPath.split("/")[-1]
-			cTime=str(datetime.now())
-			cTime=str(cTime.replace(".","1213483"))
-			cTime=str(cTime.replace(":","148971561"))
-			fName=session_data['user']['username']+cTime+"."+fPath.split(".")[-1]
+			
+			fName=session_data['user']['username']+"_avatar"+"."+fPath.split(".")[-1]
 			f=open(fDir+"/"+fName,'wb')
 			f.write(file.avatar.file.read())
 			f.close()
