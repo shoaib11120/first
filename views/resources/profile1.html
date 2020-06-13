@@ -5,13 +5,26 @@
 	
 	<div id="PData">
 		$if session["user"]==None:
-			<span>No user</span>
+			<div class="Ttext"><span>No user</span></div>
+
+			<a href="/profile/sign_up"><button>Sign up</button></a>
 		$else:
-			Username:<span>$session["user"]["username"]</span><br/>
-			Full Name:<span>$session["user"]["full_name"]</span><br/>
-			Email:<span>$session["user"]["email"]</span><br/>
-			Uid:<span>$session["user"]["_id"]</span><br/>
+			<div class="tImg"><img src="$session['user']['img']"  style="border-radius: 100%;width: 150px;height: 150px;"></div>
+			<div class="Ttext">
+				<form id="avatar_upload" method="POST" enctype="multipart/form-data" action="/upload_img/avatar">
+					<input type="file" name="avatar">
+					<button type="submit">Upload</button>
+				</form>
+			</div>
+
+			<div class="Ttext">Username:<span>$session["user"]["username"]</span><br/></div>
+			<div class="Ttext">Full Name:<span>$session["user"]["full_name"]</span><br/></div>
+			<div class="Ttext">Email:<span>$session["user"]["email"]</span><br/></div>
+			<div class="Ttext">Uid:<span>$session["user"]["_id"]</span><br/></div>
+			<button id="logoutB">Log out</button>
+			<button id="">Edit Profile</button>
+
+
 	</div><br/>
-	<a href="/profile/sign_up"><button>Sign up</button></a>
-	<button id="logoutB">Log out</button>
+	
 </div>

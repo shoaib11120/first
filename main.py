@@ -1,6 +1,8 @@
 import web
 import random
-from models import sign_up_user,log_in_user
+from models import sign_up_user,log_in_user,profile
+from datetime import datetime
+import os
 web.config.debug=True
 urls = (
 	'/','Welcome',
@@ -10,7 +12,8 @@ urls = (
 	'/profile/log_out','Log_out',
 	'/post-sign-up','Sign_up_user',
 	'/post-log-in','Log_In_user',
-	'/profile','Profile'
+	'/profile','Profile',
+	'/upload_img/avatar','AvatarUpload'
 )
 
 app=web.application(urls,globals())
@@ -72,7 +75,36 @@ class Log_In_user:
 			print(str(rValue))
 			session_data["user"]=rValue
 		return rValue
+class AvatarUpload:
+	def POST(self):
+		file=web.input(avatar={})
+		fDir=os.getcwd()+"/static/assets/avatar/"+session_data['user']['username']
 
+		if not os.path.exists(fDir):
+			os.mkdir(fDir)
+
+		if 'avatar' in file:
+			fPath=file.avatar.filename.replace("\\","/")
+			#fName=fPath.split("/")[-1]
+			cTime=str(datetime.now())
+			cTime=str(cTime.replace(".","1213483"))
+			cTime=str(cTime.replace(":","148971561"))
+			fName=session_data['user']['username']+cTime+"."+fPath.split(".")[-1]
+			f=open(fDir+"/"+fName,'wb')
+			f.write(file.avatar.file.read())
+			f.close()
+
+			update={}
+			update["img"]="/static/assets/avatar/"+session_data['user']['username']+"/"+fName
+			update["username"]=session_data['user']['username']
+
+			obj=profile.profile()
+			updated=obj.updateAvatar(update)
+
+			session_data["user"]=None
+			session_data['user']=updated
+		raise web.seeother('/profile')
+		
 if __name__ == "__main__" :
 	
 	app.run()
