@@ -10,10 +10,10 @@
 			<a href="/profile/sign_up"><button>Sign up</button></a>
 		$else:
 			<div id="tImg"><form id="avatar_upload" method="POST" enctype="multipart/form-data" action="/upload_img/avatar">
-					<input type="file" name="avatar" class="Tfile" id="TFile">
+					<input type="file" name="avatar" class="Tfile" id="TFile" onchange="DTextFun(this)">
 					<span for="Tfile" onclick="fun1('TFile')" class="Lfile" style="background-image: url('$session['user']['img']');background-size: 150px 150px;" onmouseover="hoverFun(this)" onmouseleave="nonhoverFun(this)"></span>
 	
-					<button type="submit">Upload</button>
+					<button type="submit" id="AUButton">Upload</button>
 				</form>
 			</div>
 

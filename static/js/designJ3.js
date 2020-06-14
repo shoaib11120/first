@@ -22,7 +22,12 @@ function hoverFun(span) {
 			span.classList.remove("FHover");
 		}
 		function DTextFun(inp){
-			alert(this.value)
+			var inP=inp.value;
+			i=inP.lastIndexOf("\\");
+			alert("hello "+ inP.substring(i+1));
+			uploadButton=document.getElementById('AUButton');
+			uploadButton.style.display = 'block';
+			uploadButton.innerHTML=inP.substring(i+1);
 		}
 		function fun1(ev){
 			document.getElementById(ev).click();

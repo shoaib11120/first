@@ -26,10 +26,16 @@
 	display: block;
 }
 #Timg{
-	margin:30px 0px 15px 250px ;
 	width: 100%;
 	background-color: red;
 	height: 150px;
-	position: relative;
-	display: block;
+	margin:30px 0px 15px 250px ;
+	width: 100%;
+	align-content: center;
+}
+.Lfile,#AUButton{
+	margin-left: 35%;
+}
+#AUButton{
+	display: none;
 }

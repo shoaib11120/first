@@ -92,7 +92,7 @@ class AvatarUpload:
 			f.close()
 
 			update={}
-			update["img"]="/static/assets/avatar/"+session_data['user']['username']+"/"+fName
+			update["img"]="/static/uploads/user/"+session_data['user']['username']+"/"+fName
 			update["username"]=session_data['user']['username']
 
 			obj=profile.profile()
