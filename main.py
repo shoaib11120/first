@@ -78,7 +78,7 @@ class Log_In_user:
 class AvatarUpload:
 	def POST(self):
 		file=web.input(avatar={})
-		fDir=os.getcwd()+"/static/assets/avatar/"+session_data['user']['username']
+		fDir=os.getcwd()+"/static/uploads/user/"+session_data['user']['username']
 
 		if not os.path.exists(fDir):
 			os.mkdir(fDir)
