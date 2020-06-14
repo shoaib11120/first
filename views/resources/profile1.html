@@ -9,12 +9,17 @@
 
 			<a href="/profile/sign_up"><button>Sign up</button></a>
 		$else:
-			<div class="tImg"><img src="$session['user']['img']"  style="border-radius: 100%;width: 150px;height: 150px;"></div>
-			<div class="Ttext">
-				<form id="avatar_upload" method="POST" enctype="multipart/form-data" action="/upload_img/avatar">
-					<input type="file" name="avatar">
+			<div id="tImg"><form id="avatar_upload" method="POST" enctype="multipart/form-data" action="/upload_img/avatar">
+					<input type="file" name="avatar" class="Tfile" id="TFile">
+					<span for="Tfile" onclick="fun1('TFile')" class="Lfile" style="background-image: url('$session['user']['img']');background-size: 150px 150px;" onmouseover="hoverFun(this)" onmouseleave="nonhoverFun(this)"></span>
+	
 					<button type="submit">Upload</button>
 				</form>
+			</div>
+
+
+			<div class="Ttext">
+				
 			</div>
 
 			<div class="Ttext">Username:<span>$session["user"]["username"]</span><br/></div>
