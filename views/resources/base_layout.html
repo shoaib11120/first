@@ -1,6 +1,6 @@
 $def with (page)
-$var css:/static/css/base1.css /static/css/welcomeC.css /static/css/sign_upC1.css /static/css/profileC6.css /static/css/designC3.css
-$var js:/static/js/jquery-3.5.1.js /static/js/mainS.js /static/js/welcomeJ.js /static/js/designJ3.js
+$var css:/static/css/base1.css /static/css/welcomeC.css /static/css/sign_upC1.css /static/css/profileC6.css /static/css/designC5.css
+$var js:/static/js/jquery-3.5.1.js /static/js/mainS1.js /static/js/welcomeJ.js /static/js/designJ4.js
 
 
 <!DOCTYPE html>
@@ -35,7 +35,7 @@ $var js:/static/js/jquery-3.5.1.js /static/js/mainS.js /static/js/welcomeJ.js /s
 						<div id="pr" width="30px" height="30px;" style="border-radius: 100%;">
 						<a href="/profile"  id="profile">
 							$if session["user"]==None:
-								<img width="30px" height="30px;" style="border-radius: 100%;" src="/static/assets/img1.jpg" alt="Profile"> 
+								<img width="30px" height="30px;" style="border-radius: 100%;" src="/static/assets/user.png" alt="Profile"> 
 							$else:
 								<img width="30px" height="30px;" style="border-radius: 100%;" src="$session['user']['img']" alt="Profile"> 
 							
@@ -51,12 +51,19 @@ $var js:/static/js/jquery-3.5.1.js /static/js/mainS.js /static/js/welcomeJ.js /s
 		$for i in self.js.split():
 				<script src="$i"></script>			
 
-		
+		<div id="blurBG"></div>
+
+		<div id="alertBOX">
+			<div id="alertH">heading</div>
+			<div id="alertC">content</div>
+			<div id="alertB"><button id="alertBU" onclick="CAlertBox()" data-val="">OK</button></div>
+		</div>
+
 		<div id="app" >
 			$:page
 		</div>
 
-
+		Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 		<!-- <div id="foot">
 			<div id="fCont">
 				<div class="foTags">

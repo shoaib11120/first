@@ -1,0 +1,144 @@
+.Tfile{
+	border:0;
+	clip: rect(0,0,0,0);
+	height: 1px;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	width: 1px;
+	display: block;
+
+}
+.Lfile{
+	width: 150px;
+	height: 150px;
+	display: block;
+	border-radius: 50%;
+	position: relative;
+}
+.Lfile::before,.Lfile::after{
+	transition: 0.4s;
+}
+
+.FHover::before{
+	width: 100px;
+	height:100px;
+	background-image: url("/static/assets/pencil.png");
+	background-size: 75px 75px;
+	background-position: center;
+	background-repeat: no-repeat;
+	content: "";
+	border-radius: 50%;
+	position: absolute;
+	margin: 25px 25px 25px -50px;
+	z-index: 5;
+}
+.FHover::after{
+	width: 150px;
+	height:150px;
+	content: "";
+	border-radius: 50%;
+	position: absolute;
+	background-color: rgb(255,255,255,0.4);
+	margin: 0 0 25px -75px;
+	z-index: 4;
+}
+		
+
+
+
+
+
+.inputM{
+	outline: none;
+	background-color: transparent;
+	color:purple;
+	border:none;
+	padding: 5px 0 5px 5px;
+	width: 100%;
+	height: 50px;
+}
+.inputText::before{
+	transition: 0.6s;
+	content: attr(data-V);
+	position: absolute;
+	font-size:15px;
+	top:40%;
+	left: 10px;
+}
+.inputText::after{
+	content: '';
+	transition: 0.6s;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: purple;
+	top: 100%;
+	left: 0%;
+	transform: scaleX(0);
+}
+.inputC{
+	height: 50px;
+	border-bottom: 2px solid grey;
+	position: relative;
+}
+.focus::before{
+	top:20%;
+	left: 2px;
+	color: purple;
+	font-size: 20px;
+}
+.focus::after{
+	transform: scaleX(1); 
+}
+#blurBG{
+	position: absolute;
+	z-index: 20;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.2);
+	display: none;
+}
+#header,#app{
+	/*filter: blur(2px);*/
+}
+#alertBOX{
+	position: absolute;
+	z-index: 25;
+	min-height: 40px;
+	height: 90px;
+	transition: 0.4s;
+	min-width: 250px;
+	width: 250px;
+	margin-left: 45%;
+	margin-top: 25vh;
+	background-color: #e5e5e5;
+	border-radius: 5px;
+	display: block;
+	transform: scale(0);
+}
+#alertH{
+	float: top;
+	width: 100%;
+	height: 18px;
+	font-size: 15px;
+	text-align: center;
+	color: white;
+	background-color: #e5e5;
+}
+#alertC{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	background-color: white;
+	color: purple;
+	min-height: 40px;
+
+}
+#alertB{
+	bottom: 0;
+	width: 100%;
+	height: 25px;
+	background-color: #e5e5;
+	text-align: center;
+}

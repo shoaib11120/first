@@ -21,7 +21,7 @@ class user:
 		else:
 			if password==c_password:
 				password=bcrypt.hashpw(c_password.encode(),bcrypt.gensalt())
-				id= self.Users.insert_one({"username":username,"full_name":full_name,"email":email,"password":password,"img":"/static/assets/avatar/default.png" })
+				id= self.Users.insert_one({"username":username,"full_name":full_name,"email":email,"password":password,"img":"/static/assets/user.png" })
 				return self.Users.find_one({"username":username})
 			else:
 				return "PError"
