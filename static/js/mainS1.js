@@ -1,6 +1,5 @@
 
 $(document).ready(function(){
-	console.log("loaded");
 	$(document).on("submit","#sign_up_form",function (e) {
 		// body...
 		e.preventDefault();
@@ -42,9 +41,14 @@ $(document).ready(function(){
 		});
 
 	});
+	$(document).on("submit","#passBoxForm",function (e) {
+		// body...
+		
+		alert("message?: DOMString");
+		e.preventDefault();
+	});
 	$(document).on("click","#logoutB",function (e) {
 		e.preventDefault();
-		alert("message?: DOMString")
 		$.ajax({
 			url: '/profile/log_out',
 			type: 'GET',

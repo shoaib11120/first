@@ -117,29 +117,53 @@
 	display: block;
 	transform: scale(0);
 }
-.grid-container{
-	display: inline-grid;
-}
+
 #alertH{
-	width: 15px;
-	height: 25px;
+	padding-top: 5px;
+	width: 40px;
+	height: 40px;
 	font-size: 15px;
 	text-align: center;
 	color: white;
-	background-color: #e5e5;
 }
 #alertC{
-	width: 45px;
-	height: 25px;
+	padding-top: 5px;
+	width: 150px;
+	height: 40px;
 	text-align: center;
-	background-color: white;
 	color: purple;
 	min-height: 40px;
-
+	margin: 5px;
 }
 #alertB{
-	width: 15px;
-	height: 25px;
-	background-color: #e5e5;
+	width: 40px;
+	height: 40px;
 	text-align: center;
+}
+#alertB > button{
+	margin-top:5px;
+	border:none;
+	background-color: #e5e5;
+	width:25px;
+	height: 25px;
+}
+#passBox{
+	position: absolute;
+	z-index: 25;
+	min-height: 100px;
+	height: 100px;
+	transition: 0.4s;
+	width: 250px;
+	margin-left: 45%;
+	margin-top: 25vh;
+	background-color: #e5e5e5;
+	border-radius: 5px;
+	display: block;
+	transform: scale(1);
+	text-align: center;
+}
+#passBOX form{
+	width: 150px;
+	height: 100px;
+	position: absolute;
 }

@@ -1,5 +1,5 @@
 $def with (page)
-$var css:/static/css/base1.css /static/css/welcomeC.css /static/css/sign_upC1.css /static/css/profileC6.css /static/css/designC5.css
+$var css:/static/css/base1.css /static/css/welcomeC.css /static/css/sign_upC1.css /static/css/profileC6.css /static/css/designC7.css
 $var js:/static/js/jquery-3.5.1.js /static/js/mainS1.js /static/js/welcomeJ.js /static/js/designJ4.js
 
 
@@ -53,10 +53,26 @@ $var js:/static/js/jquery-3.5.1.js /static/js/mainS1.js /static/js/welcomeJ.js /
 
 		<div id="blurBG"></div>
 
-		<div id="alertBOX" class="grid-container">
-			<div id="alertH" class="grid-item">heading</div>
-			<div id="alertC" class="grid-item">content</div>
-			<div id="alertB" class="grid-item"><button id="alertBU" onclick="CAlertBox()" data-val="">OK</button></div>
+		<div id="alertBOX">
+			<table>
+				<tr>
+					<td><div id="alertH" >h</div></td>
+					<td><div id="alertC" >content</div></td>
+					<td><div id="alertB" ><button id="alertBU" onclick="CAlertBox()" data-val="">OK</button></div></td>
+				</tr>
+			</table>
+		</div>
+		<div id="passBox">
+			<span id="passH">Enter Your Password</span>
+			<form id="passBoxForm" >
+				<div class="inputC">
+					<input class="inputM" type="password" id="password" name="password"  required onfocus="focusFun('sp4')" onblur="blurFun(this,'sp4')"><br/>
+					<span class="inputText" id="sp4" data-V="password"></span>
+				</div>
+				
+				<button type="submit">Submit</button><br/>
+			
+			</form>
 		</div>
 
 		<div id="app" >
