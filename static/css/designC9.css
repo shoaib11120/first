@@ -160,10 +160,29 @@
 	border-radius: 5px;
 	display: block;
 	transform: scale(1);
-	text-align: center;
 }
-#passBOX form{
+
+#passBOX > form {
 	width: 150px;
 	height: 100px;
-	position: absolute;
+	display: block;
+	text-align: center;
+}
+
+.APass{
+	border:0 0 2px 0;
+	border-color: purple;
+	outline: none;
+	color: purple;
+	background: transparent;
+	font-size: 15px;
+	margin:15px 0 10px 0;
+}
+#passH{
+	font-size: 20px;
+	color: purple;
+	font: bold;
+	width: 100%;
+	background: red;
+	margin-left: 10px;
 }
